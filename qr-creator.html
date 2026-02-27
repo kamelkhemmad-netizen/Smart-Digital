@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>QR Code Creator – Generate Codes Online</title>
+<meta name="description" content="Create QR codes online for WhatsApp, Instagram, Facebook and websites. Free, fast and secure.">
+<meta name="keywords" content="qr code generator online, create qr for website, social media qr, whatsapp qr code, free qr code maker">
+<link rel="stylesheet" href="assets/css/theme.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script defer src="assets/js/functions.js"></script>
+</head>
+
+<body>
+
+<header>
+<nav>
+<a href="main.html">Home</a>
+<a href="image-optimizer.html">Image Tools</a>
+<a href="pdf-optimizer.html">PDF Tools</a>
+</nav>
+</header>
+
+<h1>Generate Your QR Code</h1>
+<input type="text" id="qrInput" placeholder="Enter URL or Text">
+<button onclick="generateQR()">Generate QR</button>
+<div id="qrOutput" style="margin-top:20px;"></div>
+
+<script>
+function generateQR() {
+  const text = document.getElementById('qrInput').value;
+  const qrDiv = document.getElementById('qrOutput');
+  qrDiv.innerHTML = "";
+  if (!text) return alert("Enter text or URL!");
+  new QRCode(qrDiv, text);
+}
+</script>
+
+</body>
+</html>
