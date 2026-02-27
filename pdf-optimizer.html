@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>PDF Optimizer – Reduce PDF Size Online</title>
+<meta name="description" content="Compress large PDF files online instantly without losing quality. Free PDF optimization tool.">
+<meta name="keywords" content="pdf compressor online, reduce pdf size, online pdf optimizer, compress scanned pdf, shrink documents free">
+<link rel="stylesheet" href="assets/css/theme.css">
+<script defer src="assets/js/functions.js"></script>
+</head>
+
+<body>
+
+<header>
+<nav>
+<a href="main.html">Home</a>
+<a href="image-optimizer.html">Image Tools</a>
+<a href="qr-creator.html">QR Tools</a>
+</nav>
+</header>
+
+<h1>Compress Your PDF Files</h1>
+<input type="file" id="pdfFile">
+<button onclick="compressPDF()">Compress</button>
+
+<script>
+function compressPDF() {
+  const fileInput = document.getElementById('pdfFile');
+  const file = fileInput.files[0];
+  if (!file) return alert("Select a PDF first!");
+  alert("PDF compression works in next versions (demo).");
+}
+</script>
+
+</body>
+</html>
